@@ -1,16 +1,117 @@
-# React + Vite
+# Social Media Platform - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive social media platform built with React, Vite, and Redux Toolkit.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🔐 User Authentication (Login/Register)
+- 📝 Create, edit, and delete posts
+- 💬 Comment on posts
+- ❤️ Like and unlike posts
+- 👤 User profiles
+- 🌓 Dark/Light theme support
+- 📱 Fully responsive design
 
-## React Compiler
+## 🛠 Prerequisites
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Node.js (v16 or higher)
+- npm (v8 or higher) or yarn
+- Backend API server (Laravel)
 
-## Expanding the ESLint configuration
+## 🚀 Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/social-media-platform.git
+cd social-media-platform
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+# or
+yarn install
+```
+
+### 3. Environment Setup
+
+Create a `.env` file in the root directory with the following variables:
+
+```env
+VITE_API_BASE_URL=http://localhost:8000/api
+```
+
+### 4. Start the development server
+
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) to view it in your browser.
+
+## 🏗 Project Structure
+
+```
+src/
+├── assets/          # Static assets (images, fonts, etc.)
+├── components/      # Reusable UI components
+│   ├── auth/       # Authentication related components
+│   ├── common/     # Shared components
+│   ├── home/       # Home page components
+│   └── profile/    # Profile related components
+├── config/         # Configuration files
+├── hooks/          # Custom React hooks
+├── layouts/        # Layout components
+├── pages/          # Page components
+├── services/       # API services
+├── store/          # Redux store and slices
+├── utils/          # Utility functions
+├── App.jsx         # Main App component
+└── main.jsx        # Application entry point
+```
+
+## 🧪 Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build locally
+- `npm run lint` - Run ESLint
+- `npm run format` - Format code with Prettier
+
+## 🛠 Tech Stack
+
+- [React](https://react.dev/) - UI library
+- [Vite](https://vitejs.dev/) - Build tool
+- [Redux Toolkit](https://redux-toolkit.js.org/) - State management
+- [React Router](https://reactrouter.com/) - Routing
+- [Tailwind CSS](https://tailwindcss.com/) - Styling
+- [React Icons](https://react-icons.github.io/react-icons/) - Icon library
+- [Axios](https://axios-http.com/) - HTTP client
+
+## 📝 Environment Variables
+
+| Variable | Description | Default |
+|----------|-------------|---------|
+| `VITE_API_BASE_URL` | Base URL for API requests | `http://localhost:8000/api` |
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- [Vite](https://vitejs.dev/) for the amazing development experience
+- [React](https://react.dev/) for the component-based architecture
+- [Tailwind CSS](https://tailwindcss.com/) for the utility-first CSS framework

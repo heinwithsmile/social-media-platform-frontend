@@ -6,7 +6,7 @@ import { loginUser, registerUser } from '../../store/authThunks';
 const AuthForm = ({ isLogin = true, onSubmit }) => {
   const [formData, setFormData] = useState({
     email: '',
-    username: '',
+    name: '',
     password: '',
     confirmPassword: ''
   });
@@ -37,7 +37,7 @@ const AuthForm = ({ isLogin = true, onSubmit }) => {
       const credentials = isLogin 
         ? { email: formData.email, password: formData.password }
         : {
-            username: formData.username,
+            name: formData.name,
             email: formData.email,
             password: formData.password,
             confirmPassword: formData.confirmPassword
@@ -64,12 +64,12 @@ const AuthForm = ({ isLogin = true, onSubmit }) => {
           <label htmlFor="username" className="sr-only">Username</label>
           <input
             type="text"
-            id="username"
-            name="username"
-            value={formData.username}
+            id="name"
+            name="name"
+            value={formData.name}
             onChange={handleChange}
             className="form-input w-full rounded-lg border-0 bg-black/20 p-4 text-white placeholder:text-white/50 focus:bg-black/30 focus:ring-2 focus:ring-primary/70 transition-all duration-200"
-            placeholder="Username"
+            placeholder="Your Name"
             required={!isLogin}
           />
         </div>

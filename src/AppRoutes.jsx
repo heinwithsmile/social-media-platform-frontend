@@ -1,30 +1,44 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import App from './App';
+import MainLayout from './layouts/MainLayout';
 import HomePage from './pages/HomePage';
+import ProfilePage from './pages/ProfilePage';
 import AuthPage from './pages/auth/AuthPage';
+import { ProtectedRoute } from './components/common/ProtectedRoute';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <MainLayout />,
     children: [
       {
         index: true,
-        element: <HomePage />,
+        element: (
+          <ProtectedRoute>
+            <HomePage />
+          </ProtectedRoute>
+        ),
       },
       {
-        path: "login",
-        element: <AuthPage initialIsLogin={true} />,
-      },
-      {
-        path: "register",
-        element: <AuthPage initialIsLogin={false} />,
-      },
-      {
-        path: "logout",
-        element: <AuthPage initialIsLogin={true} />,
+        path: "/profile/:username",
+        element: (
+          <ProtectedRoute>
+            <ProfilePage />
+          </ProtectedRoute>
+        ),
       },
     ],
+  },
+  {
+    path: "/login",
+    element: <AuthPage initialIsLogin={true} />,
+  },
+  {
+    path: "/register",
+    element: <AuthPage initialIsLogin={false} />,
+  },
+  {
+    path: "/logout",
+    element: <AuthPage initialIsLogin={true} />,
   },
 ]);
 

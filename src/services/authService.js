@@ -30,7 +30,7 @@ export const register = async (userData) => {
       'Accept': 'application/json',
     },
     body: JSON.stringify({
-      name: userData.username,
+      name: userData.name,  // Changed from userData.username to userData.name
       email: userData.email,
       password: userData.password,
       password_confirmation: userData.confirmPassword,
